@@ -28,15 +28,15 @@ To deploy this project run
   2. Run "npm run build" to build react project.
 ```
 
-````bash
+```bash
   3. Then you can run "npm run app:dist" (to package in a distributable format (e.g. dmg, windows installer, deb package))
   or "npm run app:dir" (only generates the package directory without really packaging it.
-  This is useful for testing purposes). - fragment from electron builder repo
+  This is useful for testing purposes). - fragment from electron builder repo.
 ```
 
 ```bash
   In dist folder you can find installer to your app. Enjoy!
-````
+```
 
 ## Tech Stack
 

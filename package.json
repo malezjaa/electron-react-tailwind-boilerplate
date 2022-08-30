@@ -2,7 +2,7 @@
   "name": "electron-react-tailwind-boilerplate",
   "version": "0.1.0",
   "private": true,
-  "main": "./build/electron.js",
+  "main": "./public/electron.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
@@ -32,6 +32,9 @@
           "path": "/Applications"
         }
       ]
+    },
+    "extraMetadata": {
+      "main": "build/electron.js"
     },
     "files": [
       "dist/**/*",

@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="App text-red-900">
-      <h1>Electron, react and tailwind boilderpalte</h1>
+      <h1>Electron, react and tailwindwdaaaaaaaaaaaaaa boilderpalte</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}

@@ -1,0 +1,91 @@
+{
+  "name": "electron-react-tailwind-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./build/electron.js",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "electron-is-dev": "^2.0.0",
+    "electron-updater": "^5.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "homepage": "./",
+  "author": "malezja#3207",
+  "build": {
+    "appId": "io.kraken161.boilerplate",
+    "extends": null,
+    "productName": "Electron, react and tailwind boilerplate.",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "files": [
+      "dist/**/*",
+      "package.json",
+      "build/**/*"
+    ],
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "build/icon.ico"
+    }
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "dev": "concurrently -r \"cross-env BROWSER=none NODE_ENV=development npm start\" \"npm:electron\" ",
+    "electron": "wait-on tcp:3000 && electron .",
+    "app:dir": "electron-builder --dir",
+    "app:dist": "electron-builder"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "concurrently": "^7.3.0",
+    "cross-env": "^7.0.3",
+    "electron": "^20.1.0",
+    "electron-builder": "^23.3.3",
+    "electron-devtools-installer": "^3.2.0",
+    "eslint-plugin-react": "^7.31.1",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8",
+    "wait-on": "^6.0.1"
+  }
+}
